@@ -2,7 +2,7 @@
 
 定时任务 / 后台作业调度：cron + interval + 一次性 + 按需四类 job，重试/并发门/重叠档，`[QuickJob]` 编译期登记，OAuth 登录仪表盘。
 
-从原 QuickNet 单仓拆分出的独立项目。MIT 协议。
+MIT 协议。
 
 ## 安装
 
