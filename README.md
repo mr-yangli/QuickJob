@@ -7,8 +7,8 @@ MIT 协议。
 ## 安装
 
 ```bash
-dotnet add package QuickJob --prerelease
-dotnet add package QuickJob.Generators --prerelease   # [QuickJob] 特性路需要
+dotnet add package QuickJob
+dotnet add package QuickJob.Generators   # [QuickJob] 特性路需要
 ```
 
 ## 快速上手
@@ -52,6 +52,8 @@ dotnet test tests/QuickJob.Tests/QuickJob.Tests.csproj
 ## 文档
 
 见 [docs/quickjob-usage.md](docs/quickjob-usage.md)。
+
+版本改动见 [CHANGELOG.md](CHANGELOG.md)。
 
 ## License
 

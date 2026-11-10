@@ -10,11 +10,11 @@
 ## 安装
 
 ```bash
-dotnet add package QuickJob --prerelease
-dotnet add package QuickJob.Generators --prerelease   # 只有走 [QuickJob] 特性路才需要
+dotnet add package QuickJob
+dotnet add package QuickJob.Generators   # 只有走 [QuickJob] 特性路才需要
 ```
 
-命名空间 `QuickJob`。预发布系列装不到时先清缓存：`dotnet nuget locals http-cache --clear`。
+命名空间 `QuickJob`。稳定档，`dotnet add package` 不带旗标即可；新版本刚推送装不到时先清缓存：`dotnet nuget locals http-cache --clear`。
 
 ## 快速上手
 

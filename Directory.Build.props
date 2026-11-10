@@ -15,8 +15,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <!-- NuGet 打包元数据里本子树独有的那三颗。版本从 0.1.0-beta.1 起（预发布档），
-       理由见 excel/Directory.Build.props 那段注释。 -->
+  <!-- NuGet 打包元数据里本仓独有的那三颗：版本号、README 挂哪一份册子、Tags 说什么。作者与许可内联在本文件上面那段。
+       版本口径（跟 .NET 主版本走、10.0.0 起发稳定档、重打必升一颗）见 excel/Directory.Build.props 那段注释，五族共用一份。 -->
   <PropertyGroup>
     <Version>10.0.0</Version>
     <PackageReadmeFile>quickjob-usage.md</PackageReadmeFile>
