@@ -26,7 +26,9 @@ public sealed class JobOptions
     /// <summary>Relative jitter (0–1) subtracted or added on top of the computed delay. Default 0.25.</summary>
     public double RetryJitter { get; set; } = 0.25;
 
-    /// <summary>How many runs of this one job may execute simultaneously. Default 1 (serialized).</summary>
+    /// <summary>How many runs of this one job may execute simultaneously. Default 1 (serialized).
+    /// Effectively-unlimited = <see cref="int.MaxValue"/> (the gate never fills; also what callers
+    /// map "no cap" knobs like 0/unlimited onto, since 0 is clamped to 1).</summary>
     public int MaxConcurrentPerJob { get; set; } = 1;
 
     /// <summary>What to do with a slot that lands while the gate (above) is full. Default <see cref="OverlapPolicy.Skip"/>.</summary>

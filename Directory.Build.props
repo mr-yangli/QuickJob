@@ -9,7 +9,10 @@
     <RepositoryUrl>https://github.com/mr-yangli/QuickJob.git</RepositoryUrl>
   </PropertyGroup>
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
+    <!-- 多目标 net10.0 + net11.0：单包双资产，消费方按宿主 TFM 自动还原。
+         例外两层：src/QuickJob.Generators 自钉 netstandard2.0（编译器进程限制），
+         benchmarks 层自钉单档（对照组 TickerQ 的 TFM 所定）。 -->
+    <TargetFrameworks>net10.0;net11.0</TargetFrameworks>
     <LangVersion>preview</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -18,7 +21,8 @@
   <!-- NuGet 打包元数据里本仓独有的那三颗：版本号、README 挂哪一份册子、Tags 说什么。作者与许可内联在本文件上面那段。
        版本口径（跟 .NET 主版本走、10.0.0 起发稳定档、重打必升一颗）见 excel/Directory.Build.props 那段注释，五族共用一份。 -->
   <PropertyGroup>
-    <Version>10.0.0</Version>
+    <!-- 10.1.0：新增多目标 net10.0+net11.0 属新增（非破坏），按家规升次版本号。 -->
+    <Version>10.1.0</Version>
     <PackageReadmeFile>quickjob-usage.md</PackageReadmeFile>
     <PackageTags>jobs;scheduler;cron;background-tasks</PackageTags>
   </PropertyGroup>

@@ -1,6 +1,6 @@
 # QuickJob 使用文档
 
-**QuickJob** 是面向 .NET 10 的**任务调度库**：cron 定时、间隔拍（interval）、一次性定时（once）、按需作业（on-demand）四类 job 一网打尽，自带逐 job 取数（payload）、重试回报、并发门与重叠档，配**编译期登记**（`[QuickJob]` 特性 → 源生成器）与**OAuth 登录的 Dashboard**。**零第三方依赖**（只引 `Microsoft.Extensions.DependencyInjection.Abstractions`，容器选择归宿主），**全引擎可测**（时钟/库存两个接缝都注入式）。本文件同时也是 NuGet 包内 README。
+**QuickJob** 是面向 .NET 10 / .NET 11 的**任务调度库**（单包双目标 `net10.0;net11.0`，按宿主 TFM 自动还原）：cron 定时、间隔拍（interval）、一次性定时（once）、按需作业（on-demand）四类 job 一网打尽，自带逐 job 取数（payload）、重试回报、并发门与重叠档，配**编译期登记**（`[QuickJob]` 特性 → 源生成器）与**OAuth 登录的 Dashboard**。**零第三方依赖**（只引 `Microsoft.Extensions.DependencyInjection.Abstractions`，容器选择归宿主），**全引擎可测**（时钟/库存两个接缝都注入式）。本文件同时也是 NuGet 包内 README。
 
 > QuickNet 家族第五家：与 QuickSql / QuickExcel / QuickWord 同风格——零依赖、MIT、独立列模型互不相认、源码短平快。
 

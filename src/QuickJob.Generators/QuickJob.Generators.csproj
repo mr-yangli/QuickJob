@@ -1,9 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <!-- 源生成器跑在编译器进程里，只能 netstandard2.0。根 props 的「netstandard2.0 就关掉
-         trim/AOT 分析器」那条开关救不了这里：Directory.Build.props 先于本文件的
-         TargetFramework 求值，那时它还是空的，NETSDK1210 会直接变成错误，所以四个值在这里显式压掉。 -->
+    <!-- 源生成器跑在编译器进程里，只能 netstandard2.0。根 props 已改多目标（TargetFrameworks），
+         而 restore 认 TargetFrameworks、build 认 TargetFramework —— 只覆盖单数会把 assets 写成
+         net10/net11、build 这边炸 NETSDK1005，所以两个属性都显式钉回 netstandard2.0。
+         netstandard2.0 就关掉 trim/AOT 分析器：NETSDK1210 那四个值在这里显式压掉。 -->
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <TargetFramework>netstandard2.0</TargetFramework>
     <IsAotCompatible>false</IsAotCompatible>
     <EnableTrimAnalyzer>false</EnableTrimAnalyzer>
